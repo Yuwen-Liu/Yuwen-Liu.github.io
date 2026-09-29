@@ -35,6 +35,75 @@ body.home-page{isolation:isolate}
 .page-glow{pointer-events:none;z-index:-1}
 .hero-decoration{position:absolute;pointer-events:none;z-index:-1}
 @media print{#ambient-network,.page-glow,.hero-decoration{display:none!important}}
+
+/* September 2026 revision: plain original-style navigation and more readable text. */
+body.home-page{font-size:17px}
+.home-page .site-header{position:sticky;top:0;width:100%;margin:0;padding:0;border:0;border-bottom:1px solid var(--border);border-radius:0;box-shadow:none;background:rgba(255,255,255,.96)}
+.home-page .nav-shell{width:min(1120px,calc(100% - 48px));min-height:76px;margin:0 auto;padding:0;border:0;border-radius:0;box-shadow:none;background:transparent}
+.home-page .brand{display:flex;align-items:center;gap:10px;margin:0;padding:0;border:0;border-radius:0;box-shadow:none;background:transparent;transform:none;font-size:16px}
+.home-page .brand-mark{width:36px;height:36px;min-width:36px;display:grid;place-items:center;border:0;border-radius:11px;background:var(--ink);color:#fff;font-size:14px;box-shadow:none;transform:none}
+.home-page .brand-text{font-size:16px;color:var(--ink);font-weight:750}
+.home-page .nav-links{font-size:14px;gap:22px}
+.home-page .affiliation{font-size:15px}
+.home-page .contact-chip{font-size:13px}
+.home-page .about-text{font-size:16px;line-height:1.95}
+.home-page .stat span{font-size:13px;line-height:1.6}
+.home-page .section-note{font-size:13px;line-height:1.8}
+.home-page .interest-list li{font-size:14px}
+.home-page .news-list li{font-size:15px}
+.home-page .news-date{font-size:13px}
+.home-page .filter{font-size:13px;padding:7px 12px}
+.home-page .search-wrap input{font-size:14px}
+.home-page .results-line{font-size:13px}
+.home-page .publication h3{font-size:18px;line-height:1.6}
+.home-page .authors{font-size:14px;line-height:1.85}
+.home-page .venue{font-size:14px;line-height:1.8}
+.home-page .pub-year,.home-page .pub-index{font-size:13px}
+.home-page .pub-bottom{font-size:12px}
+.home-page .badge{font-size:12px}
+.home-page .show-more{font-size:14px}
+.home-page .award-year{font-size:14px}
+.home-page .award-body strong{font-size:16px}
+.home-page .award-body small{font-size:14px;line-height:1.8}
+.home-page .person strong{font-size:16px}
+.home-page .person small{font-size:13px;line-height:1.7;min-height:44px}
+.home-page .person-mark{font-size:13px}
+.home-page .scholar-label{font-size:13px}
+.home-page .service-grid h3{font-size:16px}
+.home-page .service-grid p{font-size:15px}
+.home-page .section-link{font-size:14px}
+.home-page .site-footer{font-size:13px}
+@media(min-width:900px){
+ .home-page .two-col .interest-list li{font-size:14px}
+ .home-page .two-col .news-list li{font-size:14px;grid-template-columns:75px minmax(0,1fr)}
+}
+@media(max-width:850px){
+ .home-page .nav-links{font-size:12px;gap:14px}
+}
+@media(max-width:640px){
+ .home-page .nav-shell{width:calc(100% - 28px);min-height:64px;padding:12px 0}
+ .home-page .brand,.home-page .brand-text{font-size:14px}
+ .home-page .brand-mark{width:31px;height:31px;min-width:31px;font-size:12px}
+ .home-page .nav-links a{font-size:12px}
+ .home-page .affiliation{font-size:14px}
+ .home-page .about-text{font-size:15px}
+ .home-page .contact-chip{font-size:12px}
+ .home-page .interest-list li{font-size:13px}
+ .home-page .news-list li{font-size:14px;grid-template-columns:70px minmax(0,1fr)}
+ .home-page .news-date{font-size:12px}
+ .home-page .publication h3{font-size:16px}
+ .home-page .authors,.home-page .venue{font-size:13px}
+ .home-page .pub-bottom{flex-wrap:wrap;font-size:12px}
+ .home-page .pub-year,.home-page .pub-index{font-size:12px}
+ .home-page .badge{font-size:11px}
+ .home-page .award-list li{grid-template-columns:72px minmax(0,1fr)}
+ .home-page .award-year{font-size:12px}
+ .home-page .award-body strong{font-size:15px}
+ .home-page .award-body small{font-size:13px}
+ .home-page .person small{min-height:0}
+ .home-page .section-link{font-size:12px}
+ .home-page .section-note,.home-page .results-line,.home-page .site-footer{font-size:12px}
+}
 </style>
 </head>
 <body class="home-page" id="top">
@@ -42,7 +111,7 @@ body.home-page{isolation:isolate}
 <div class="page-glow" aria-hidden="true"></div>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><nav class="nav-shell container" aria-label="Primary navigation">
-<a class="brand" href="index.html"><span class="brand-mark">YL</span><span>Yuwen Liu</span></a>
+<a class="brand" href="index.html"><span class="brand-mark">YL</span><span class="brand-text">Yuwen Liu</span></a>
 <button class="menu-button" id="menu-toggle" aria-controls="primary-links" aria-expanded="true" hidden>Menu</button>
 <div class="nav-links" id="primary-links"><a href="index.html" class="active" aria-current="page">Home</a><a href="publications.html">Publications</a><a href="projects.html">Projects</a><a href="honors.html">Honors</a><a href="service.html">Academic Service</a></div>
 </nav></header>
@@ -52,17 +121,17 @@ body.home-page{isolation:isolate}
 <div class="hero-decoration hero-decoration-two" aria-hidden="true"></div>
 <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-dot"></span>Recommender Systems · Multimodal AI · LLMs</div>
 <h1 class="name" id="name">Yuwen Liu <span class="cn-name" lang="zh-CN">刘玉文</span></h1>
-<p class="role">Lecturer</p><p class="affiliation">Faculty of Computer Science and Technology<br><a href="https://www.qlu.edu.cn/" target="_blank" rel="noopener noreferrer">Qilu University of Technology (Shandong Academy of Sciences)</a><br>Jinan, Shandong, China</p>
+<p class="role">Lecturer</p><p class="affiliation">Shandong Computer Science Center (National Supercomputer Center in Jinan)<br><a href="https://www.qlu.edu.cn/" target="_blank" rel="noopener noreferrer">Qilu University of Technology (Shandong Academy of Sciences)</a><br>Jinan, Shandong, China</p>
 <div class="contact-row"><a class="contact-chip" href="mailto:yuwenliu97@gmail.com"><span class="chip-icon" aria-hidden="true">✉</span>Email</a><a class="contact-chip" href="https://scholar.google.com/citations?user=IBhXvD8AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer"><span class="chip-icon" aria-hidden="true">G</span>Google Scholar</a><a class="contact-chip" href="https://dblp.org/pid/141/4661-3.html" target="_blank" rel="noopener noreferrer"><span class="chip-icon" aria-hidden="true">D</span>DBLP</a><a class="contact-chip" href="https://orcid.org/0000-0002-4911-5744" target="_blank" rel="noopener noreferrer"><span class="chip-icon" aria-hidden="true">iD</span>ORCID</a></div></div>
 <div class="portrait-wrap"><div class="portrait-ring" aria-hidden="true"></div><span class="portrait-fallback" aria-hidden="true">YL</span><img class="portrait" src="images/yuwen.jpg" width="202" height="242" alt="Portrait of Yuwen Liu" onerror="this.hidden=true"></div>
 </section>
 <section class="section" id="about"><div class="section-heading"><span class="section-number">01</span><h2>About Me</h2></div>
-<p class="about-text">I am a Lecturer with the Faculty of Computer Science and Technology at <strong>Qilu University of Technology (Shandong Academy of Sciences)</strong>. I received my doctoral degree from China University of Petroleum (East China), advised by <a href="https://scholar.google.com/citations?user=pxNRRsAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Prof. Lianyong Qi ↗</a>. My research focuses on recommender systems, particularly sequential and point-of-interest recommendation, multimodal recommendation, large language models for recommendation, and trustworthy and explainable recommendation.</p>
-<p class="about-text">I was selected for the <strong>CAST Young Elite Scientists Sponsorship Program for Doctoral Students</strong> in 2025. My research has received the <strong>IEEE ATC 2022 Best Paper Award</strong> and ESI Highly Cited and Hot Paper recognition. My publications include first-author, co-first-author and collaborative work in NeurIPS, SIGIR, AAAI, WWW, IJCAI, ACM Multimedia and leading journals.</p>
+<p class="about-text">I am a Lecturer with the Shandong Computer Science Center (National Supercomputer Center in Jinan) at <strong>Qilu University of Technology (Shandong Academy of Sciences)</strong>. I received my doctoral degree from China University of Petroleum (East China), advised by <a href="https://scholar.google.com/citations?user=pxNRRsAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Prof. Lianyong Qi ↗</a>. My research focuses on recommender systems, particularly sequential and point-of-interest recommendation, multimodal recommendation, large language models for recommendation, and trustworthy and explainable recommendation.</p>
+<p class="about-text">I was selected for the <strong>CAST Young Elite Scientists Sponsorship Program for Doctoral Students</strong> in 2024. My research has received the <strong>IEEE ATC 2022 Best Paper Award</strong> and ESI Highly Cited and Hot Paper recognition. My publications include first-author, co-first-author and collaborative work in NeurIPS, SIGIR, AAAI, WWW, IJCAI, ACM Multimedia and leading journals.</p>
 <div class="stats" aria-label="Research snapshot"><div class="stat"><strong>38</strong><span>Publication records<br>including accepted work</span></div><div class="stat"><strong>5</strong><span>ESI Highly Cited Papers<br>cumulative recognition</span></div><div class="stat"><strong>2</strong><span>ESI Hot Papers<br>cumulative recognition</span></div><div class="stat"><strong>18</strong><span>First / co-first-author<br>publication records</span></div></div>
 <p class="section-note">Publication list updated September 2026. ESI distinctions reflect recognition recorded through August 2026.</p></section>
 <div class="two-col"><section class="section" id="research"><div class="section-heading"><span class="section-number">02</span><h2>Research Interests</h2></div><ul class="interest-list"><li>Recommender Systems</li><li>Multimodal Recommendation</li><li>Large Language Models</li><li>Sequential &amp; POI Recommendation</li><li>Trustworthy &amp; Explainable AI</li><li>Graph &amp; Hypergraph Learning</li><li>Recommendation Unlearning</li><li>Continuous-Time Modeling</li></ul></section>
-<section class="section" id="news"><div class="section-heading"><span class="section-number">03</span><h2>News</h2></div><ul class="news-list"><li><span class="news-date">2026.09</span><span>AdaSRU accepted at <strong>NeurIPS 2026 as an Oral</strong>.</span></li><li><span class="news-date">2026.08</span><span>Joined Qilu University of Technology (Shandong Academy of Sciences) as a Lecturer.</span></li><li><span class="news-date">2026</span><span>New first-author papers at <strong>SIGIR (Oral)</strong> and <strong>AAAI</strong>.</span></li><li><span class="news-date">2025</span><span>Selected for the <strong>CAST doctoral student sponsorship program</strong>.</span></li></ul></section></div>
+<section class="section" id="news"><div class="section-heading"><span class="section-number">03</span><h2>News</h2></div><ul class="news-list"><li><span class="news-date">2026.09</span><span>AdaSRU accepted at <strong>NeurIPS 2026 as an Oral</strong>.</span></li><li><span class="news-date">2026.08</span><span>Joined Qilu University of Technology (Shandong Academy of Sciences) as a Lecturer.</span></li><li><span class="news-date">2026</span><span>New first-author papers at <strong>SIGIR (Oral)</strong> and <strong>AAAI</strong>.</span></li><li><span class="news-date">2024</span><span>Selected for the <strong>CAST doctoral student sponsorship program</strong>.</span></li></ul></section></div>
 <section class="section" id="publications"><div class="section-heading"><span class="section-number">04</span><h2 id="publication-heading">Selected Publications</h2><a class="section-link" href="https://scholar.google.com/citations?user=IBhXvD8AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a></div>
 <p class="section-note" style="margin:0 0 18px">Eight representative papers spanning recent conference contributions and ESI-recognized research. Browse all publications using the filters below. <strong>Yuwen Liu</strong> is highlighted; * denotes equal contribution. ESI badges indicate previously received recognition.</p>
 <div class="tools-row" id="publication-tools" hidden><div class="filters" aria-label="Filter publications"><button class="filter" type="button" data-filter="selected" aria-pressed="true">Selected (8)</button><button class="filter" type="button" data-filter="all" aria-pressed="false">All (38)</button><button class="filter" type="button" data-filter="first" aria-pressed="false">First / co-first</button><button class="filter" type="button" data-filter="advisor" aria-pressed="false">Advisor-led</button><button class="filter" type="button" data-filter="coauthor" aria-pressed="false">Coauthored</button><button class="filter" type="button" data-filter="esi" aria-pressed="false">ESI papers</button></div><label class="search-wrap"><span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">Search publications</span><input id="publication-search" type="search" placeholder="Search all 38 publications…" autocomplete="off"></label></div>
@@ -107,7 +176,7 @@ body.home-page{isolation:isolate}
 <li class="publication" data-tags="coauthor" data-year="2020" id="paper-38"><div class="pub-index">38</div><div class="pub-body"><div class="pub-top"><span class="pub-year">2020</span></div><h3>Trust-Based Missing Link Prediction in Signed Social Networks with Privacy Preservation</h3><p class="authors">Huaizhen Kou, Fan Wang, Chao Lv, Zhaoan Dong, Wanli Huang, Hao Wang, <strong>Yuwen Liu</strong></p><p class="venue">Wireless Communications and Mobile Computing, 2020: 6662047 · 2020</p><div class="pub-bottom"><span>Coauthor</span><a class="" href="https://scholar.google.com/scholar?q=%22Trust-Based%20Missing%20Link%20Prediction%20in%20Signed%20Social%20Networks%20with%20Privacy%20Preservation%22" target="_blank" rel="noopener noreferrer">Scholar search ↗</a></div></div></li></ol><p id="no-results" class="empty" hidden>No matching publications. Try another keyword or filter.</p><button type="button" class="show-more" id="show-more" hidden aria-expanded="false" aria-controls="publication-list">View all 38 publications</button><noscript><p class="noscript-note">All publications are displayed. Enable JavaScript to use search and filters.</p></noscript>
 </section>
 <section class="section" id="honors"><div class="section-heading"><span class="section-number">05</span><h2>Honors &amp; Awards</h2></div><ul class="award-list">
-<li class="award-feature"><span class="award-year">2025</span><div class="award-body"><strong>CAST Young Elite Scientists Sponsorship Program for Doctoral Students</strong><small lang="zh-CN">首届中国科协青年人才托举工程博士生专项</small></div></li>
+<li><span class="award-year">2024</span><div class="award-body"><strong>CAST Young Elite Scientists Sponsorship Program for Doctoral Students</strong><small lang="zh-CN">首届中国科协青年人才托举工程博士生专项</small></div></li>
 <li><span class="award-year">2024 / 2025</span><div class="award-body"><strong>Shandong Provincial Postgraduate Innovation Achievement Awards</strong><small lang="zh-CN">山东省研究生创新成果，独立作者</small></div></li>
 <li><span class="award-year">2022</span><div class="award-body"><strong>IEEE ATC Best Paper Award <span class="badge gold">First Author</span></strong><small>Vehicle Check-In Data-Driven POI Recommendation Based on Improved SVD and Graph Convolutional Network.</small></div></li>
 <li><span class="award-year">2024 / 2021</span><div class="award-body"><strong>National Scholarship for Doctoral / Master's Students</strong><small lang="zh-CN">博士研究生国家奖学金（2024）；硕士研究生国家奖学金（2021）</small></div></li>
